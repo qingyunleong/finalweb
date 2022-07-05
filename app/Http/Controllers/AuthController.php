@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\subjects;
+use App\Models\Tutor;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -51,7 +51,7 @@ class AuthController extends Controller
 
     public function create(array $data)
     {
-        return User::create([
+        return Tutor::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
